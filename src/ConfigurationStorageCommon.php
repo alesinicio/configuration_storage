@@ -4,6 +4,10 @@ namespace SinFramework\ConfigurationStorage;
 use Exception;
 
 abstract class ConfigurationStorageCommon {
+	protected $configurationFilename	= null;
+	protected $newConfigurationFile		= null;
+	protected $arrConfiguration			= [];
+	
 	/**
 	 * @throws Exception Throws Exception on error
 	 * @return bool Returns whether the new configuration was successfully writen to the configuration file

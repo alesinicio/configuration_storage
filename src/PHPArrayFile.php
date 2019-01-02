@@ -10,10 +10,7 @@ use Exception;
  * The data is stored as a single named-array var.
  */
 class PHPArrayFile extends ConfigurationStorageCommon implements ConfigurationStorageInterface {
-	private $configurationFilename	= null;
-	private $newConfigurationFile	= null;
-	private $arrConfiguration		= [];
-	private $writeNewVars			= false;
+	private $writeNewVars = false;
 	
 	/**
 	 * @param string $configurationFilename (optional) The full path/filename for the configuration file
