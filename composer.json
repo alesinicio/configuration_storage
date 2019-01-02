@@ -1,0 +1,12 @@
+{
+	"name" : "SinFramework/ConfigurationStorage",
+	"autoload" : {
+		"psr-4" : {
+			"SinFramework\\ConfigurationStorage\\" : "src/"
+		}
+	},
+	"dist" : {
+		"url" : "http://localhost/ConfigurationStorage/dist/1.0-latest.zip",
+		"type" : "zip"
+	}
+}
