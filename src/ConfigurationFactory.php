@@ -46,8 +46,7 @@ class ConfigurationFactory {
 	 * @return PHPConfigurationFile
 	 */
 	private static function createPhpConfigurationFile(array $config) : PHPConfigurationFile {
-		$obj = new PHPConfigurationFile();
-		$obj->setStorageLocation($config['storage']);
+		$obj = new PHPConfigurationFile($config['storage']);
 		return $obj;
 	}
 	/**
@@ -57,8 +56,7 @@ class ConfigurationFactory {
 	 * @return PHPDefinesFile
 	 */
 	private static function createPhpDefinesFile(array $config) : PHPDefinesFile {
-		$obj = new PHPDefinesFile();
-		$obj->setStorageLocation($config['storage']);
+		$obj = new PHPDefinesFile($config['storage']);
 		return $obj;
 	}
 	/**
@@ -68,8 +66,7 @@ class ConfigurationFactory {
 	 * @return PHPArrayFile
 	 */
 	private static function createPhpArrayFile(array $config) : PHPArrayFile {
-		$obj = new PHPArrayFile();
-		$obj->setStorageLocation($config['storage']);
+		$obj = new PHPArrayFile($config['storage']);
 		return $obj;
 	}
 }
