@@ -91,7 +91,7 @@ class PHPArrayFile extends ConfigurationStorageCommon implements ConfigurationSt
 	 * @param array $exclusions Keys that should be deleted
 	 * @return boolean Returns whether the new configuration was successfully writen to the configuration file
 	 */
-	private function parseNewFile(array $exclusions=[]) : bool {
+	protected function parseNewFile(array $exclusions=[]) : bool {
 		$config = require($this->configurationFilename);
 		if (!is_array($config)) $config = [];
 
@@ -113,7 +113,7 @@ class PHPArrayFile extends ConfigurationStorageCommon implements ConfigurationSt
 	 * @param string $var
 	 * @return string
 	 */
-	private function generateNewLine($var) : string {
+	protected function generateNewLine($var) : string {
 		return '\''.$var.'\'=>'.self::formatValues($this->arrConfiguration[$var]).','.PHP_EOL;
 	}
 }
